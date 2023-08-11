@@ -13,3 +13,16 @@
       }
     ]
   }
+
+  {
+    "nome": "Sara Oliveira",
+    "senha": "456",
+    "email": "sjo@aluno.ifnmg.edu.br"
+  }
+
+  {
+    "id": 1,
+    "nome": "Sara Oliveira",
+    "senha": "456",
+    "email": "sjo@aluno.ifnmg.edu.br"
+  }
