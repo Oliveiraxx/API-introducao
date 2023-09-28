@@ -1,30 +1,26 @@
 //index.js
-import dotenv from "dotenv";
-import express from "express";
-dotenv.config();
 import roteadorUsuario from "./routes/usuario.js";
+import dotenv from "dotenv";
+dotenv.config();
+import express from "express";
 import roteadorLogin from "./routes/login.js";
 
-const app = express(); // Instancia o Express
-const port = 3000; // Define a porta
 
+const app = express();              
+const port = 3000;                  
 
-//index.js
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(roteadorUsuario);
 app.use(roteadorLogin);
-app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
-  console.log("Rota / solicitada");
-  // Cria a rota da raiz do projeto
+app.get("/", (req, res) => {        
   res.json({
-    nome: "Sara Oliveira", // Substitua pelo seu nome 
+    nome: "Sara de Jesus Oliveira",      
   });
+  console.log("Rota / solicitada");
 });
 
-
-app.listen(port, () => {
-  // Um socket para "escutar" as requisições
+app.listen(port, () => {           
   console.log(`Serviço escutando na porta:  ${port}`);
 });
